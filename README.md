@@ -267,5 +267,5 @@ All teams are English.
 To launch the bomber, you need to go through 3 stages.  
 1. Add a victim using the [**add**](#Add) command.
 2. Select the method of bombers using the [**choose**](#Choose) command.
-3. Start the bomber with the [**start**](#Start) command.
+3. Start the bomber with the [**start**](#Start) command.  
 That's all.
