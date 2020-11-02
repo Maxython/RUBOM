@@ -16,7 +16,6 @@
   - [Add](#Add)
   - [Choose](#Choose)
     - [Sms](#Sms)
-    - [Calls](#Calls)
   - [Return](#Return)
     - [Pol](#Pol)
     - [Bomber](#Bomber)
@@ -52,26 +51,36 @@ The missing modules will be automatically installed.
 All teams are English.
 
 - ### Add
-   The command to add a victim (user). To do this, you need a number, first name, last name and patronymic (the latter is optional).  
+   The command to add a victim (user). To do this, you need a number, email, first name, last name and patronymic (everything except the number is optional).  
    **Example:**
    ```
-   command>add 89999999999 Иван Иванович Иванович
+   command>add 89999999999 email@gmail.com Иван Иванович Иванович
+   
+   Номер об этом россияне был сохранён.
+   
+   command>
+   ```
+   If you want to enter the victim's name, but don't remember the email. You can specify ***None*** in the email line.  
+   **Example:**
+   ```
+   command>add 89999999999 None Иван Иванович Иванович
    
    Номер об этом россияне был сохранён.
    
    command>
    ```
 - ### Choose
-   The command to select the bomber. There are only 2 types: ***1*** - SMS and ***2*** - call.  
+   The command to select the bomber.  
    **Example:**
    ```
    command>choose
    
-   Пора выбирать бумбер)
-   1-sms сообщения
-   2-звонки
-   3-выйти
-   
+   1-банк тинькофф(sel)
+   2-банк санкт-петербург(sel)
+   3-мтс(req)
+   4-теле(sel)
+   5-выход
+
    choice>
    ```
    Next to the bomber options, there will be brackets with the module that will be used.  
@@ -82,16 +91,14 @@ All teams are English.
    - #### Sms
       Bomber method that sends a certain number of SMS (the number of messages must be specified in the [start](#Start) command).  
       **Note** :heavy_exclamation_mark:: 1 of the bomber method will work with a certain ***operator***.  
-      Method ***2***, you need a ***mts operator***.
-   - #### Calls
-      A bomber method that makes a call for a victim.
+      Method ***3***, you need a ***mts operator***.
 - ### Return
    A command that returns all information about the victim, the selected bomber and driver settings for Selenium.  
    **Example:**
    ```
    command>return
 
-   Вот вся информация:{'pol': {'number': '89999999999', 'name': 'Иван', 'surname': 'Иванович', 'patronymic': 'Иванович', 'connection': 'megafon'}, 'bomber': {'type1': 1, 'type2': 1, 'url': 'https://www.instagram.com/accounts/emailsignup/?hl=ru'}}.
+   Вот вся информация:{'bomber': {'type': 4, 'url': 'https://msk.tele2.ru/tariffs'}, 'pol': {'number': '89999999999', 'email': 'email@gmail.com', 'name': 'Иван', 'surname': 'Иванович', 'patronymic': 'Иванович', 'connection': 'megafon'}}.
 
    command>
    ```
@@ -102,7 +109,7 @@ All teams are English.
       ```
       command>return pol
 
-      Вот вся информация:{'number': '89999999999', 'name': 'Иван', 'surname': 'Иванович', 'patronymic': 'Иванович', 'connection': 'megafon'}.
+      Вот вся информация:{'number': '89999999999', 'email': 'email@gmail.com', 'name': 'Иван', 'surname': 'Иванович', 'patronymic': 'Иванович', 'connection': 'megafon'}.
 
       command>
       ```
@@ -112,7 +119,7 @@ All teams are English.
       ```
       command>return bomber
 
-      Вот вся информация:{'type1': 1, 'type2': 1, 'url': 'https://www.instagram.com/accounts/emailsignup/?hl=ru'}.
+      Вот вся информация:{'type': 4, 'url': 'https://msk.tele2.ru/tariffs'}.
 
       command>
       ```
@@ -218,13 +225,7 @@ All teams are English.
       ```
 - ### Start
    The command that launches the bomber.  
-   **Example:**
-   ```
-   command>start
-   
-   Ок, понял.
-   ```
-   If you have chosen the first bomber method, then it will ask for the number of sms before launching.  
+   Before launching the bomber, it will ask for the number of future sms sent to the victim.  
    **Example:**
    ```
    command>start
@@ -247,7 +248,7 @@ All teams are English.
       ```
       command>v
       
-      1.0
+      0.1
       ```
    - #### Exit
       The command to exit the program.  
