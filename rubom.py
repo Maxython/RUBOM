@@ -165,13 +165,13 @@ while True:
                     else:
                         print('Давай всё по новому.\n')
             elif ch == '4':
-                print('\nУкажите прокси, c http или типо того(1-выход, None-неуказан).\n')
+                print('\nУкажите прокси, c http или типо того(1-выход, none-неуказан).\n')
                 zn = input('value>')
                 clear()
                 if zn == '1':
                     print('\nТы вышел из этой функции.\n')
                 else:
-                    sel['proxy'] = None if zn == 'None' else zn
+                    sel['proxy'] = None if zn.lower() == 'none' else zn
                     print('\nПрокси был установлен.\n')
             elif ch == '5':
                 if name_os == 'Windows':
