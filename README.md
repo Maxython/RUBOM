@@ -252,7 +252,7 @@ All teams are English.
       ```
       command>v
       
-      0.1
+      0.1.1
       ```
    - #### Exit
       The command to exit the program.  
