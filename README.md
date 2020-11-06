@@ -10,6 +10,7 @@
 ```
 ## Content
 
+- [About the new version](https://github.com/Maxython/RUBOM/releases/tag/v0.1.1)
 - [What is RUBOM](#What-is-RUBOM)
 - [Installation](#Installation)
 - [Commands](#Commands)
@@ -60,10 +61,10 @@ All teams are English.
    
    command>
    ```
-   If you want to enter the victim's name, but don't remember the email. You can specify ***None*** in the email line.  
+   If you want to enter the victim's name, but don't remember the email. You can specify ***none*** in the email line.  
    **Example:**
    ```
-   command>add 89999999999 None Иван Иванович Иванович
+   command>add 89999999999 none Иван Иванович Иванович
    
    Номер об этом россияне был сохранён.
    
@@ -74,6 +75,8 @@ All teams are English.
    **Example:**
    ```
    command>choose
+   
+   Пора выбирать бумбер, это всё sms)
    
    1-банк тинькофф(sel)
    2-банк санкт-петербург(sel)
@@ -201,18 +204,19 @@ All teams are English.
       ```
       choice>4
       
-      Укажите прокси, c http или типо того(1-выход, None-неуказан).
+      Укажите прокси, c http или типо того(1-выход, none-неуказан).
       
       value>
       ```
-      The proxy must have the type specified, to remove the proxy, enter ***None***.  
+      The proxy must have the type specified, to remove the proxy, enter ***none***.  
       **Example:**  
       ```
       value>http://213.111.230.247:8080
       ```
    - #### Chrome driver installer
       Department for enabling or disabling the driver installer for Chrome.  
-      The default is ***True***.  
+      This feature is only available for Windows users.  
+      The default value depends on the OS, Windows is **True**, something else is **False**. 
       **Example:**
       ```
       choice>5
