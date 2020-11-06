@@ -37,7 +37,7 @@ sel = {
 'headless':True,
 'window_size':'1920x935',
 'proxy':None,
-'installer_chrome_win':True if system == 'Windows' else False
+'installer_chrome_win':True if name_os == 'Windows' else False
 }
 
 
