@@ -80,7 +80,7 @@ while True:
             elif ch == '4':
                 infor['bomber'] = {'type':4, 'url':'https://msk.tele2.ru/tariffs'}
                 print('\nСпособ бумер был выбран.\n')
-                breakquit()
+                break
             elif ch == '5':
                 print('\nТы вышел из этой функции.\n')
                 break
