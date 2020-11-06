@@ -40,9 +40,9 @@ while True:
     elif com[0] == 'add':
         if len(com) >= 2:
             if len(com) == 5 or len(com) == 2:
-                com.append('None')
+                com.append('none')
             if (com[1][0] == '8' or (com[1][0] == '+' and com[1][1] == '7')) and (len(com[1]) == 11 or len(com[1]) == 12):
-                if com[2] == 'None' or (('@gmail.com' in com[2] or '@yandex.ru' in com[2] or '@mail.ru' in com[2]) and is_eng(com[2].split('@')[0]) == True):
+                if com[2].lower() == 'none' or (('@gmail.com' in com[2] or '@yandex.ru' in com[2] or '@mail.ru' in com[2]) and is_eng(com[2].split('@')[0]) == True):
                     if '+' in com[1]:
                         com[1] = com[1].replace('+7', '8')
                     connect = None
@@ -50,10 +50,10 @@ while True:
                         if int(com[1][1]+com[1][2]+com[1][3]) in view_nom[i]:
                             connect = i
                             break
-                    infor['pol'] = {'number':com[1], 'email': None if len(com) < 3 else None if com[2] == 'None' else com[2], 'name': None if len(com) < 4 else None if com[3] == 'None' else com[3], 'surname':None if len(com) < 5 else None if com[4] == 'None' else com[4], 'patronymic':None if len(com) < 6 else None if com[5] == 'None' else com[5], 'connection':connect}
+                    infor['pol'] = {'number':com[1], 'email': None if len(com) < 3 else None if com[2].lower() == 'none' else com[2], 'name': None if len(com) < 4 else None if com[3].lower() == 'none' else com[3], 'surname':None if len(com) < 5 else None if com[4].lower() == 'none' else com[4], 'patronymic':None if len(com) < 6 else None if com[5].lower() == 'none' else com[5], 'connection':connect}
                     print('\nНомер об этом россияне был сохранён.\n')
                 else:
-                    print('\nТы указал неправильный емаил, если ты его не знаешь, укажи None.\n')
+                    print('\nТы указал неправильный емаил, если ты его не знаешь, укажи none.\n')
             else:
                 print('\nТы указал неправильный номер, подозридельно -_- .\n')
         else:
@@ -62,7 +62,7 @@ while True:
         clear()
         print('\nПора выбирать бумбер, это всё sms)')
         while True:
-            print('\n1-банк тинькофф(sel)\n2-банк санкт-петербург(sel)\n3-мтс(req)\n4-теле(sel)\n5-выход\n')
+            print('\n1-банк тинькофф(sel)\n2-банк санкт-петербург(squit()el)\n3-мтс(req)\n4-теле(sel)\n5-выход\n')
             ch = input('choice>')
             clear()
             if ch == '1':
@@ -80,7 +80,7 @@ while True:
             elif ch == '4':
                 infor['bomber'] = {'type':4, 'url':'https://msk.tele2.ru/tariffs'}
                 print('\nСпособ бумер был выбран.\n')
-                break
+                breakquit()
             elif ch == '5':
                 print('\nТы вышел из этой функции.\n')
                 break
@@ -174,23 +174,26 @@ while True:
                     sel['proxy'] = None if zn == 'None' else zn
                     print('\nПрокси был установлен.\n')
             elif ch == '5':
-                while True:
-                    print('1-True\n2-False\n3-выход\n')
-                    ch = input('choice>')
-                    clear()
-                    if ch == '1':
-                        sel['installer_chrome_win'] = True
-                        print('\nФункция была включена.\n')
-                        break
-                    elif ch == '2':
-                        sel['installer_chrome_win'] = False
-                        print('\nФункция была выключена.\nУстановка драйвера для chrome: https://chromedriver.chromium.org/downloads\n')
-                        break
-                    elif ch == '3':
-                        print('\nТы вышел из этой функции.\n')
-                        break
-                    else:
-                        print('\nЯ не понял.\n')
+                if name_os == 'Windows':
+                    while True:
+                        print('1-True\n2-False\n3-выход\n')
+                        ch = input('choice>')
+                        clear()
+                        if ch == '1':
+                            sel['installer_chrome_win'] = True
+                            print('\nФункция была включена.\n')
+                            break
+                        elif ch == '2':
+                            sel['installer_chrome_win'] = False
+                            print('\nФункция была выключена.\nУстановка драйвера для chrome: https://chromedriver.chromium.org/downloads\n')
+                            break
+                        elif ch == '3':
+                            print('\nТы вышел из этой функции.\n')
+                            break
+                        else:
+                            print('\nЯ не понял.\n')
+                else:
+                    print('\nЭто функция доступна только для пользователей винды.\n')
             elif ch == '6':
                 print('\nТы вышел из этой функции.\n')
                 break
@@ -239,19 +242,25 @@ while True:
                 print('\nВид связи у жертвы небодходит для бумбера.\nЗа что????????????((((\n')
         else:
             print('\nТы дебил? Мне нехватает информация.\n')
-    elif com[0] == 'clear':
+    elif com[0] == 'clear' or com[0] == 'cls':
         clear()
-    elif com[0] == 'v':
-        print('\n0.1\n')
+    elif com[0].lower() == 'v' or com[0].lower() == 'version':
+        print('\n0.1.1\n')
     elif com[0] == 'neofetch':
         clear()
         print('')
         file = open('logo.txt', 'r')
         for i in file:
             print(i, end='')
-        print('\nversion: 0.1\nby: Maxython\nGitHub: https://github.com/Maxython\nGitHub repositories: https://github.com/Maxython/RUBOM\n')
-    elif com[0] == 'exit':
+        print('\nversion: 0.1.1\nby: Maxython\nGitHub: https://github.com/Maxython\nGitHub repositories: https://github.com/Maxython/RUBOM\n')
+    elif com[0] == 'exit' or com[0] == 'quit':
         print('\nПока, уверен мы ещё увидимся.\n')
+        exit()
+    elif com[0] == 'Mashik':
+        clear()
+        print('20102004-232301112020')
+        sleep(0.1)
+        clear()
         exit()
     else:
         print('\nЯ не понял.\n')
