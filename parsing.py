@@ -1,5 +1,5 @@
 from os import system
-from platform import system as name_os
+from sys import platform
 from time import sleep
 from modules import *
 from random import randint
@@ -7,20 +7,20 @@ from random import randint
 while True:
     try:
         from selenium import webdriver
-        if name_os == 'Windows':
+        if 'win' in platform:
             from webdriver_manager.chrome import ChromeDriverManager
         from selenium.webdriver.support.ui import Select
         import requests
         break
     except:
         print('\nИдёт установка модулей\n')
-        if name_os == 'Windows':
+        if 'win' in platform:
             if system('pip install selenium') != 0:
                 print('\npip не установлен, установите его.\n')
                 exit()
             system('pip install webdriver-manager')
             system('pip install requests')
-        elif name_os == 'Linux':
+        elif platform == 'linux':
             if system('sudo pip3 install selenium') != 0:
                 print('\nИдёт установка pip3.\n')
                 system('sudo apt-get install python3-pip -y')
@@ -37,7 +37,7 @@ sel = {
 'headless':True,
 'window_size':'1920x935',
 'proxy':None,
-'installer_chrome_win':True if name_os == 'Windows' else False
+'installer_chrome_win':True if 'win' in platform else False
 }
 
 
