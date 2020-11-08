@@ -174,7 +174,7 @@ while True:
                     sel['proxy'] = None if zn.lower() == 'none' else zn
                     print('\nПрокси был установлен.\n')
             elif ch == '5':
-                if name_os == 'Windows':
+                if 'win' in platform:
                     while True:
                         print('1-True\n2-False\n3-выход\n')
                         ch = input('choice>')
