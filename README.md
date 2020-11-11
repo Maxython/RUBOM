@@ -49,7 +49,7 @@ $python3 rubom.py
 The missing modules will be automatically installed.
 
 ## Commands
-All teams are English.
+All commands are in English.  
 
 - ### Add
    The command to add a victim (user). To do this, you need a number, email, first name, last name and patronymic (everything except the number is optional).  
