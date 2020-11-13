@@ -37,7 +37,7 @@
 - [Launch stages](#Launch-stages)
 
 ## News
-At the moment, the development of the RUBOM v0.2 update is underway.  In the near future, the documentation will be changed and new features of RUBOM will appear in this section.
+Development of the RUBOM v0.2 update is currently underway.  In the near future, the documentation will be changed, and this section will contain information about the new features of RUBOM.
 
 ## What is RUBOM
 RUBOM - a bomber jacket for Russian numbers with Russian numbers. The program itself is completely Russian, except for the team. Hint: it is possible that the next updates will include not only Russian numbers :blush:
