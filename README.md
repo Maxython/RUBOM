@@ -11,6 +11,7 @@
 ## Content
 
 - [About the new version](https://github.com/Maxython/RUBOM/releases/tag/v0.1.1)
+- [News](#News)
 - [What is RUBOM](#What-is-RUBOM)
 - [Installation](#Installation)
 - [Commands](#Commands)
@@ -34,6 +35,9 @@
     - [Exit](#Exit)
     - [Help](#Help)
 - [Launch stages](#Launch-stages)
+
+## News
+At the moment, the development of the RUBOM v0.2 update is underway.  In the near future, the documentation will be changed and new features of RUBOM will appear in this section.
 
 ## What is RUBOM
 RUBOM - a bomber jacket for Russian numbers with Russian numbers. The program itself is completely Russian, except for the team. Hint: it is possible that the next updates will include not only Russian numbers :blush:
