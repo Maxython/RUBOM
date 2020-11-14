@@ -220,7 +220,7 @@ All commands are in English.
    - #### Chrome driver installer
       Department for enabling or disabling the driver installer for Chrome.  
       This feature is only available for Windows users.  
-      The default value depends on the OS, Windows is **True**, something else is **False**. 
+      The default value depends on the OS, Windows is **True**, something else is **False**.  
       **Example:**
       ```
       choice>5
