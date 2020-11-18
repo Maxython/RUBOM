@@ -14,6 +14,7 @@
 - [News](#News)
 - [What is RUBOM](#What-is-RUBOM)
 - [Installation](#Installation)
+  - [Self-installation of modules](#Self-installation-of-modules)
 - [Commands](#Commands)
   - [Add](#Add)
   - [Choose](#Choose)
@@ -50,7 +51,10 @@ $git clone https://github.com/Maxython/RUBOM
 $cd RUBOM
 $python3 rubom.py
 ```
-The missing modules will be automatically installed.
+The missing modules will be automatically installed, but you can install them yourself.
+
+- ### Self-installation of modules
+   `pip3 install selenium requests`
 
 ## Commands
 All commands are in English.  
