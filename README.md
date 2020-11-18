@@ -45,7 +45,7 @@ RUBOM - a bomber jacket for Russian numbers with Russian numbers. The program it
 
 ## Installation
 To install and run RUBOM, you need to clone and run `rubom.py`.  
-RUBY is supported on the most recent version of python (3.9).
+RUBY is supported on the most recent version of python (3.9).  
 ```
 $git clone https://github.com/Maxython/RUBOM
 $cd RUBOM
@@ -61,7 +61,7 @@ All commands are in English.
 
 - ### Add
    The command to add a victim (user). To do this, you need a number, email, first name, last name and patronymic (everything except the number is optional).  
-   **Example:**
+   **Example:**  
    ```
    command>add 89999999999 email@gmail.com Иван Иванович Иванович
    
@@ -70,7 +70,7 @@ All commands are in English.
    command>
    ```
    If you want to enter the victim's name, but don't remember the email. You can specify ***none*** in the email line.  
-   **Example:**
+   **Example:**  
    ```
    command>add 89999999999 none Иван Иванович Иванович
    
@@ -80,7 +80,7 @@ All commands are in English.
    ```
 - ### Choose
    The command to select the bomber.  
-   **Example:**
+   **Example:**  
    ```
    command>choose
    
@@ -98,14 +98,14 @@ All commands are in English.
    **sel** - through the ***selenium*** module.  
    **req** - through the ***requests*** module.  
    **What does this mean?**  
-   This means that if you use RUBOM on ***Termux***, then bombers that work through selenium will not work!  
+   This means that if you use RUBOM on ***Termux*** or on ***iSH***, then bombers that work through selenium will not work!  
    - #### Sms
       Bomber method that sends a certain number of SMS (the number of messages must be specified in the [start](#Start) command).  
       **Note** :heavy_exclamation_mark:: 1 of the bomber method will work with a certain ***operator***.  
       Method ***3***, you need a ***mts operator***.
 - ### Return
    A command that returns all information about the victim, the selected bomber and driver settings for Selenium.  
-   **Example:**
+   **Example:**  
    ```
    command>return
 
@@ -116,7 +116,7 @@ All commands are in English.
    You can also return specific information.  
    - #### Pol
       Returns information about the victim.  
-      **Example:**
+      **Example:**  
       ```
       command>return pol
 
@@ -126,7 +126,7 @@ All commands are in English.
       ```
    - #### Bomber
       Returns information about the bomber.  
-      **Example:**
+      **Example:**  
       ```
       command>return bomber
 
@@ -136,7 +136,7 @@ All commands are in English.
       ```
    - #### Sel
       Returns configuration information for Selenium.  
-      **Example:**
+      **Example:**  
       ```
       command>return sel
 
@@ -146,7 +146,7 @@ All commands are in English.
       ```
 - ### Set
    This command enables the setting for selenium.  
-   **Example:**
+   **Example:**  
    ```
    command>set
    
@@ -164,7 +164,7 @@ All commands are in English.
       Department for driver selection.  
       There are 2 choices. These are ***Chrome*** and ***FireFox***.  
       The default is ***Chrome***.  
-      **Example:**
+      **Example:**  
       ```
       choice>1
       
@@ -180,7 +180,7 @@ All commands are in English.
    - #### Headless mode
       Department for turning on and off the opening window(headless mode) during the operation of the bomber.
       The default is ***True***.  
-      **Example:**
+      **Example:**  
       ```
       choice>2
       
@@ -193,7 +193,7 @@ All commands are in English.
    - #### Window size
       Department for indicating the size of the window when the bomber is launched.  
       The default is ***1920x935***.  
-      **Example:**
+      **Example:**  
       ```
       choice>3
       
@@ -202,13 +202,13 @@ All commands are in English.
       value>
       ```
       First you need to specify the ***height***, then the ***width***, separated by a space.  
-      **Example:**
+      **Example:**  
       ```
       value>1920 935
       ```
    - #### Add ip (proxy)
       Department by ip (proxy).  
-      **Example:**
+      **Example:**  
       ```
       choice>4
       
@@ -225,7 +225,7 @@ All commands are in English.
       Department for enabling or disabling the driver installer for Chrome.  
       This feature is only available for Windows users.  
       The default value depends on the OS, Windows is **True**, something else is **False**.  
-      **Example:**
+      **Example:**  
       ```
       choice>5
       
@@ -238,7 +238,7 @@ All commands are in English.
 - ### Start
    The command that launches the bomber.  
    Before launching the bomber, it will ask for the number of future sms sent to the victim.  
-   **Example:**
+   **Example:**  
    ```
    command>start
    
@@ -250,13 +250,13 @@ All commands are in English.
 - ### Supplements
    - #### Clear
       Command to clear the screen.  
-      **Example:**
+      **Example:**  
       ```
       command>clear
       ```
    - #### Version (v)
       Command that returns the version of the program.  
-      **Example:**
+      **Example:**  
       ```
       command>v
       
@@ -264,7 +264,7 @@ All commands are in English.
       ```
    - #### Exit
       The command to exit the program.  
-      **Example:**
+      **Example:**  
       ```
       command>exit
       
@@ -272,7 +272,7 @@ All commands are in English.
       ```
    - #### Help
       Help team.  
-      **Example:**
+      **Example:**  
       ```
       command>help
       ```
