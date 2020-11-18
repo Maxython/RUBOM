@@ -62,7 +62,7 @@ while True:
         clear()
         print('\nПора выбирать бумбер, это всё sms)')
         while True:
-            print('\n1-банк тинькофф(sel)\n2-банк санкт-петербург(squit()el)\n3-мтс(req)\n4-теле(sel)\n5-выход\n')
+            print('\n1-банк тинькофф(sel)\n2-банк санкт-петербург(sel)\n3-мтс(req)\n4-теле(sel)\n5-выход\n')
             ch = input('choice>')
             clear()
             if ch == '1':
